@@ -34,14 +34,7 @@ class ProductService {
     }
 
     async updateProduct(id, data) {
-        const product = await Products.findById(id);
-
-        if (!product) {
-            throw new NotFound("상품이 존재하지 않습니다.");
-        }
-        if (!(await product.verifyPassword(data.password))) {
-            throw new BadRequest("비밀번호가 일치하지 않습니다.");
-        }
+        const product = await this.verifyProductOwner(id, data.password);
         if (data.status) {
             product.status = data.status;
         }
@@ -57,7 +50,7 @@ class ProductService {
     }
 
     async deleteProduct(id, password) {
-        const product = await this.Products.findById(id);
+        const product = await this.verifyProductOwner(id, password);
 
         // 상품이 존재하지 않는 경우, 에러 메시지를 반환합니다.
         if (!product) {
@@ -69,6 +62,16 @@ class ProductService {
         await this.Products.findByIdAndDelete(id);
         product.password = undefined;
         product.__v = undefined;
+        return product;
+    }
+    async verifyProductOwner(id, password) {
+        const product = await this.Products.findById(id);
+        if (!product) {
+            throw new NotFound("상품이 존재하지 않습니다.");
+        }
+        if (!(await product.verifyPassword(password))) {
+            throw new BadRequest("비밀번호가 일치하지 않습니다.");
+        }
         return product;
     }
 }

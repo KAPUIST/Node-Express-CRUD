@@ -83,3 +83,650 @@
           Name: Bad Request
           Message: 이미 같은이름의 상품이 존재합니다.
         
+[Request] 2024-05-13T09:14:42.042Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:14:42.300Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"New Item","description":"Details of new item","manager":"Manager Name","password":"12345"}
+
+          [Error] 2024-05-13T09:14:42.302Z
+          Name: ValidationError
+          Message: password 는 6 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:14:42.353Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:14:42.353Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:14:42.366Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:14:42.366Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:14:42.379Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:14:42.380Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:14:58.978Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:14:59.217Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"New Item","description":"Details of new item","manager":"Manager Name","password":"12345"}
+
+          [Error] 2024-05-13T09:14:59.218Z
+          Name: ValidationError
+          Message: password 는 6 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:14:59.249Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:14:59.249Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:14:59.273Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:14:59.273Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:14:59.309Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:14:59.310Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:15:26.901Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:15:28.165Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"test Item","description":"Details of new item","manager":"Manager Name","password":"12345"}
+
+          [Error] 2024-05-13T09:15:28.166Z
+          Name: ValidationError
+          Message: password 는 6 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:15:28.190Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:15:28.191Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:15:28.221Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:15:28.222Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:15:28.237Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:15:28.238Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:15:45.861Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:15:46.203Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"test Item","description":"Details of new item","manager":"Manager Name","password":"thswldud77"}
+
+[Request] 2024-05-13T09:15:46.332Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:15:46.333Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:15:46.362Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:15:46.363Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:15:46.386Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:15:46.387Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:16:47.783Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:16:48.036Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"Test Item","description":"Details of new item","manager":"Manager Name","password":"thswldud77"}
+
+[Request] 2024-05-13T09:16:48.146Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:16:48.146Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:16:48.167Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:16:48.167Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:16:48.181Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:16:48.181Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:17:23.205Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:17:23.477Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"Test Item","description":"Details of new item","manager":"Manager Name","password":"thswldud77"}
+
+[Request] 2024-05-13T09:17:23.721Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:17:23.722Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:17:23.745Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:17:23.745Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:17:23.758Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:17:23.759Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:18:50.074Z
+  Method: GET
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"213113213"}
+
+          [Error] 2024-05-13T09:18:50.076Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:19:27.601Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:19:27.605Z
+          Name: MongoNotConnectedError
+          Message: Client must be connected before running operations
+        
+[Request] 2024-05-13T09:19:36.606Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:19:36.607Z
+          Name: MongoNotConnectedError
+          Message: Client must be connected before running operations
+        
+[Request] 2024-05-13T09:19:39.594Z
+  Method: GET
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"213113213"}
+
+          [Error] 2024-05-13T09:19:39.595Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:20:09.629Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:20:40.137Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"New Item","description":"헤응헤응헤응.","manager":"luke","password":"thswldud7"}
+
+[Request] 2024-05-13T09:20:59.930Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-13T09:21:00.247Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"Test Item","description":"Details of new item","manager":"Manager Name","password":"thswldud77"}
+
+[Request] 2024-05-13T09:21:00.348Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"password":"wrongpassword"}
+
+          [Error] 2024-05-13T09:21:00.349Z
+          Name: ValidationError
+          Message: name 정보는 필수 입니다.
+        
+[Request] 2024-05-13T09:21:00.372Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"","description":"No name"}
+
+          [Error] 2024-05-13T09:21:00.372Z
+          Name: ValidationError
+          Message: name 은 3 글자이상 작성해주셔야 합니다.
+        
+[Request] 2024-05-13T09:21:00.391Z
+  Method: GET
+  URL: /api/products/nonexistentid
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:21:00.392Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T09:21:05.197Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-13T09:21:05.200Z
+          Name: MongoNotConnectedError
+          Message: Client must be connected before running operations
+        
+[Request] 2024-05-13T09:21:46.056Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"New Item","description":"헤응헤응헤응.","manager":"luke","password":"thswldud7"}
+
+          [Error] 2024-05-13T09:21:46.068Z
+          Name: MongoNotConnectedError
+          Message: Client must be connected before running operations
+        
+[Request] 2024-05-13T09:21:55.668Z
+  Method: POST
+  URL: /api/products
+  Params: {}
+  Body: {"name":"New Item","description":"헤응헤응헤응.","manager":"luke","password":"thswldud7"}
+
+[Request] 2024-05-13T09:22:01.172Z
+  Method: GET
+  URL: /api/products/6641dbb37e22a99c279a9a0c
+  Params: {}
+  Body: {"password":"213113213"}
+
+[Request] 2024-05-13T09:22:08.514Z
+  Method: GET
+  URL: /api/products/6641dbb37e22a99c279a9a0c
+  Params: {}
+  Body: {"password":"dsfsfdsfdsfsd"}
+
+[Request] 2024-05-13T09:22:26.339Z
+  Method: PUT
+  URL: /api/products/6641dbb37e22a99c279a9a0c
+  Params: {}
+  Body: {"name":"Edit New Item2","description":"헤응헤응헤응헤응헤응.","manager":"luke","password":"sdfdsfsdddddddssdddd","status":"FOR_SALE"}
+
+          [Error] 2024-05-13T09:22:26.423Z
+          Name: Bad Request
+          Message: 비밀번호가 일치하지 않습니다.
+        
+[Request] 2024-05-13T09:22:31.637Z
+  Method: PUT
+  URL: /api/products/1
+  Params: {}
+  Body: {"name":"Edit New Item2","description":"헤응헤응헤응헤응헤응.","manager":"luke","password":"sdfdsfsdddddddssdddd","status":"FOR_SALE"}
+
+          [Error] 2024-05-13T09:22:31.638Z
+          Name: CastError
+          Message: 유효하지않은 Id 입니다.
+        
+[Request] 2024-05-13T12:16:17.497Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+[Request] 2024-05-13T12:16:49.371Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:16:49.390Z
+          Name: ValidationError
+          Message: User validation failed: role: `User` is not a valid enum value for path `role`.
+        
+[Request] 2024-05-13T12:17:42.655Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:17:42.679Z
+          Name: ValidationError
+          Message: User validation failed: role: `User` is not a valid enum value for path `role`.
+        
+[Request] 2024-05-13T12:18:29.534Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:18:29.562Z
+          Name: ValidationError
+          Message: User validation failed: role: `user` is not a valid enum value for path `role`.
+        
+[Request] 2024-05-13T12:18:36.895Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:18:36.910Z
+          Name: ValidationError
+          Message: User validation failed: role: `zxc` is not a valid enum value for path `role`.
+        
+[Request] 2024-05-13T12:18:49.217Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:18:49.476Z
+          Name: ReferenceError
+          Message: newProduct is not defined
+        
+[Request] 2024-05-13T12:19:18.544Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:19:18.567Z
+          Name: Bad Request
+          Message: 이메일 또는 사용자 이름이 이미 사용 중입니다.
+        
+[Request] 2024-05-13T12:19:47.486Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:19:47.501Z
+          Name: Bad Request
+          Message: 이메일 또는 사용자 이름이 이미 사용 중입니다.
+        
+[Request] 2024-05-13T12:20:44.547Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+[Request] 2024-05-13T12:25:52.627Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@navercom","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:25:52.636Z
+          Name: ValidationError
+          Message: usename 정보는 필수 입니다.
+        
+[Request] 2024-05-13T12:26:11.700Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@navercom","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:26:11.704Z
+          Name: ValidationError
+          Message: usename 정보는 필수 입니다.
+        
+[Request] 2024-05-13T12:26:35.650Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@navercom","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:26:35.653Z
+          Name: ValidationError
+          Message: usename 정보는 필수 입니다.
+        
+[Request] 2024-05-13T12:26:44.738Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@navercom","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:26:44.741Z
+          Name: ValidationError
+          Message: 유효한 이메일 주소를 입력해야 합니다.
+        
+[Request] 2024-05-13T12:26:51.808Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:26:51.821Z
+          Name: Bad Request
+          Message: 이메일 또는 사용자 이름이 이미 사용 중입니다.
+        
+[Request] 2024-05-13T12:29:43.925Z
+  Method: POST
+  URL: /api/register
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:29:43.993Z
+          Name: Bad Request
+          Message: 이메일 또는 사용자 이름이 이미 사용 중입니다.
+        
+[Request] 2024-05-13T12:31:50.372Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+[Request] 2024-05-13T12:32:03.739Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+[Request] 2024-05-13T12:32:16.284Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","email":"tkrk0@naver.com","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:32:16.287Z
+          Name: ValidationError
+          Message: "email" is not allowed
+        
+[Request] 2024-05-13T12:32:24.314Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:32:24.326Z
+          Name: Bad Request
+          Message: 이메일 또는 사용자 이름이 이미 사용 중입니다.
+        
+[Request] 2024-05-13T12:35:38.465Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud72"}
+
+          [Error] 2024-05-13T12:35:38.485Z
+          Name: ReferenceError
+          Message: password is not defined
+        
+[Request] 2024-05-13T12:35:51.123Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud72"}
+
+          [Error] 2024-05-13T12:35:51.138Z
+          Name: TypeError
+          Message: User.verifyPassword is not a function
+        
+[Request] 2024-05-13T12:36:25.803Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud72"}
+
+          [Error] 2024-05-13T12:36:26.050Z
+          Name: Bad Request
+          Message: 비밀번호가 일치하지 않습니다.
+        
+[Request] 2024-05-13T12:54:05.690Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+[Request] 2024-05-13T12:54:35.648Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+[Request] 2024-05-13T12:59:07.466Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+          [Error] 2024-05-13T12:59:07.711Z
+          Name: TypeError
+          Message: res.cookies is not a function
+        
+[Request] 2024-05-13T12:59:27.263Z
+  Method: POST
+  URL: /api/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
