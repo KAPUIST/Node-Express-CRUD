@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "format": "prettier --write *.js **/*.js",
-    "dev": "nodemon app.js",
+    "dev": "nodemon app.js"
 
   },
   "dependencies": {
