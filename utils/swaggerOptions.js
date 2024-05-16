@@ -8,8 +8,8 @@ const swaggerDefinition = {
         description: `
         이 API 문서는 개발자들을 위한 안내서입니다. 다음은 데모 접속 정보입니다:
   
-        - **데모 아이디:** admin
-        - **데모 비밀번호:** thswldud7!
+        - 데모 아이디: admin
+        - 데모 비밀번호: thswldud7!
   
         이 정보를 사용하여 API의 데모 버전에 접근하고 테스트할 수 있습니다.
         - Admin 용 api에 접근할수있습니다.
