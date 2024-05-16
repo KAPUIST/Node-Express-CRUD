@@ -453,3 +453,14 @@
           Name: Unauthorized
           Message: 토큰이 누락되었습니다.
         
+[Request] 2024-05-16T05:15:57.181Z
+  Method: POST
+  URL: /api/auth/login
+  Params: {}
+  Body: {"username":"admin","password":"thswldud7!"}
+
+[Request] 2024-05-16T05:16:04.862Z
+  Method: POST
+  URL: /api/auth/refresh
+  Params: {}
+  Body: {"username":"admin","password":"thswldud7!"}
