@@ -17,7 +17,7 @@ const swaggerDefinition = {
     },
     servers: [
         {
-            url: "http://dfgdwssegf.shop:3000//api",
+            url: "http://dfgdwssegf.shop:3000/api",
             description: "Development server"
         }
     ],
