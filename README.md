@@ -2,6 +2,33 @@
 
 -   [Api Swagger](http://dfgdwssegf.shop:3000/swagger/)
 
+# 서버 실행 방법
+
+## 설치 절차
+
+1. 레포지토리 클론
+2. 의존성 설치 (yarn)
+3. 환경변수 설정:
+
+-   프로젝트 루트에 .env 파일을 생성하고 필요한 변수를 설정해야 합니다 .
+
+```
+MONGODB_CONNECTION_URI="YOUR_MONGO"
+MONGODB_DBNAME="node_express"
+PORT = 3000
+JWT_ACCESS_SECRET="node5"
+JWT_REFRESH_SECRET="5edon"
+```
+
+4. 서버 실행
+
+-   서버실행 커멘드 : yarn start
+-   개발모드 실행 : yarn run dev
+
+5. 서버 접근
+
+-   [http://localhost:3000/api](http://localhost:3000/api)
+
 # ✨EndPoint
 
 ## 인증 관련 엔드포인트
