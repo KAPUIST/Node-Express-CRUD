@@ -35,18 +35,24 @@ class ProductService {
 
     async updateProduct(id, data) {
         const product = await this.verifyProductOwner(id, data.password);
-        if (data.status) {
-            product.status = data.status;
-        }
-        product.name = data.name;
-        product.description = data.description;
-        product.manager = data.manager;
+
+        const fieldUpdate = ["name", "description", "manager", "status"];
+        fieldUpdate.forEach((item) => {
+            if (data[item] !== undefined) {
+                product[item] = data[item];
+            }
+        });
+
         await product.save();
 
-        product.password = undefined;
-        product.__v = undefined;
-
-        return product;
+        const returnedProduct = {
+            id: product._id,
+            name: product.name,
+            description: product.description,
+            manager: product.manager,
+            status: product.status
+        };
+        return returnedProduct;
     }
 
     async deleteProduct(id, password) {
@@ -55,9 +61,6 @@ class ProductService {
         // 상품이 존재하지 않는 경우, 에러 메시지를 반환합니다.
         if (!product) {
             throw new BadRequest("상품이 존재하지 않습니다.");
-        }
-        if (!(await product.verifyPassword(password))) {
-            throw new BadRequest("비밀번호가 일치하지 않습니다.");
         }
         await this.Products.findByIdAndDelete(id);
         product.password = undefined;

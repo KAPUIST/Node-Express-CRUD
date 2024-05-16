@@ -58,6 +58,7 @@ class ProductController {
     updateProduct = async (req, res, next) => {
         try {
             const validatedData = await productValidation.validateAsync(req.body);
+
             const updatedProduct = await this.productService.updateProduct(req.params.productId, validatedData);
             res.status(statusCode.OK).json({
                 status: statusCode.OK,

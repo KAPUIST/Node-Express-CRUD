@@ -64,3 +64,17 @@ export class ValidationError extends Error {
         this.name = "ValidationError";
     }
 }
+export class Unauthorized extends Error {
+    constructor(message = "토큰이 누락되었습니다.") {
+        super(message);
+        this.status = statusCode.UNAUTHORIZED;
+        this.name = "Unauthorized";
+    }
+}
+export class Forbidden extends Error {
+    constructor(message = "토큰이 누락되었습니다.") {
+        super(message);
+        this.status = statusCode.FORBIDDEN;
+        this.name = "Forbidden";
+    }
+}
