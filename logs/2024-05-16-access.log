@@ -1,0 +1,120 @@
+
+[Request] 2024-05-16T01:11:45.851Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-16T01:11:52.833Z
+  Method: POST
+  URL: /api/auth/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+[Request] 2024-05-16T01:12:31.577Z
+  Method: DELETE
+  URL: /api/admin/products/664211fe910feb67cafb7d29
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-16T01:34:36.415Z
+  Method: DELETE
+  URL: /api/admin/products/664211fe910feb67cafb7d29
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-16T01:34:36.429Z
+          Name: Forbidden
+          Message: Forbidden: 엑세스 토큰이 만료되었습니다.
+        
+[Request] 2024-05-16T01:34:42.729Z
+  Method: POST
+  URL: /api/auth/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+[Request] 2024-05-16T01:34:53.097Z
+  Method: DELETE
+  URL: /api/admin/products/664211fe910feb67cafb7d29
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-16T01:34:53.099Z
+          Name: Forbidden
+          Message: 권한이 존재하지않습니다.
+        
+[Request] 2024-05-16T01:36:10.797Z
+  Method: DELETE
+  URL: /api/admin/products/664211fe910feb67cafb7d29
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-16T01:36:10.824Z
+          Name: Forbidden
+          Message: 권한이 존재하지않습니다.
+        
+[Request] 2024-05-16T01:36:21.831Z
+  Method: POST
+  URL: /api/auth/login
+  Params: {}
+  Body: {"username":"luke","password":"thswldud7"}
+
+[Request] 2024-05-16T01:36:31.061Z
+  Method: DELETE
+  URL: /api/admin/products/664211fe910feb67cafb7d29
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-16T01:36:31.112Z
+          Name: ReferenceError
+          Message: statusCode is not defined
+        
+[Request] 2024-05-16T01:37:16.773Z
+  Method: DELETE
+  URL: /api/admin/products/664211fe910feb67cafb7d29
+  Params: {}
+  Body: {}
+
+          [Error] 2024-05-16T01:37:16.798Z
+          Name: NotFound
+          Message: 상품이 존재하지 않습니다.
+        
+[Request] 2024-05-16T01:37:23.271Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-16T01:37:31.100Z
+  Method: DELETE
+  URL: /api/admin/products/6641dbb37e22a99c279a9a0c
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-16T01:37:39.461Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-16T01:37:39.787Z
+  Method: GET
+  URL: /api/products
+  Params: {}
+  Body: {}
+
+[Request] 2024-05-16T01:37:56.242Z
+  Method: PUT
+  URL: /api/admin/products/6641fb5cef056960457187b6
+  Params: {}
+  Body: {"name":"Edit New Item3","description":"로직 개선했찌.","manager":"luke","status":"SOLD_OUT"}
+
+          [Error] 2024-05-16T01:37:56.243Z
+          Name: Unauthorized
+          Message: 토큰이 누락되었습니다.
+        
+[Request] 2024-05-16T01:38:12.133Z
+  Method: PUT
+  URL: /api/admin/products/6641fb5cef056960457187b6
+  Params: {}
+  Body: {"name":"Edit New Item3","description":"로직 개선했찌.","manager":"luke","status":"SOLD_OUT"}

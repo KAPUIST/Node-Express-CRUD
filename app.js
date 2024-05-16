@@ -5,7 +5,8 @@ import cookieParser from "cookie-parser";
 import connectDB from "./db.js";
 import { errorHandler } from "./middlewares/errorHandler.middleware.js";
 import ProductController from "./controllers/productController.js";
-import AuthContorller from "./controllers/authContorller.js";
+import AuthController from "./controllers/authContorller.js";
+import AdminController from "./controllers/adminController.js";
 import loggerMiddleware from "./middlewares/logger.middleware.js";
 connectDB();
 
@@ -17,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(loggerMiddleware);
-app.use("/api", [AuthContorller, ProductController]);
+app.use("/api", [AuthController, AdminController, ProductController]);
 
 // 404 에러 처리
 app.use((req, res, next) => {

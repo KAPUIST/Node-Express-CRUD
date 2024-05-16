@@ -54,13 +54,42 @@ class ProductService {
         };
         return returnedProduct;
     }
+    async updateProductForAdmin(id, data) {
+        const product = await this.Products.findById(id);
+        if (!product) {
+            throw new NotFound("상품이 존재하지 않습니다.");
+        }
 
+        const fieldUpdate = ["name", "description", "manager", "status"];
+        fieldUpdate.forEach((item) => {
+            if (data[item] !== undefined) {
+                product[item] = data[item];
+            }
+        });
+
+        await product.save();
+
+        const returnedProduct = {
+            id: product._id,
+            name: product.name,
+            description: product.description,
+            manager: product.manager,
+            status: product.status
+        };
+        return returnedProduct;
+    }
     async deleteProduct(id, password) {
         const product = await this.verifyProductOwner(id, password);
 
-        // 상품이 존재하지 않는 경우, 에러 메시지를 반환합니다.
+        await this.Products.findByIdAndDelete(id);
+        product.password = undefined;
+        product.__v = undefined;
+        return product;
+    }
+    async deleteProductForAdmin(id) {
+        const product = await this.Products.findById(id);
         if (!product) {
-            throw new BadRequest("상품이 존재하지 않습니다.");
+            throw new NotFound("상품이 존재하지 않습니다.");
         }
         await this.Products.findByIdAndDelete(id);
         product.password = undefined;
