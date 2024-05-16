@@ -17,9 +17,6 @@ class AuthController {
         this.router.post("/auth/register", this.register);
         this.router.post("/auth/login", this.login);
         this.router.post("/auth/refresh", this.refresh);
-        this.router.get("/auth/protected", authenticateToken, authorize(["user"]), (req, res, next) => {
-            res.status(200).json({ message: "This is a protected route" });
-        });
     }
     refresh = async (req, res, next) => {
         const refreshToken = req.cookies.refreshToken;
@@ -98,3 +95,127 @@ class AuthController {
     };
 }
 export default new AuthController().router;
+
+/**
+ * @swagger
+ * tags:
+ *   name: Authentication
+ *   description: 유저 인증 관리
+ */
+
+/**
+ /**
+ * @swagger
+ * /auth/register:
+ *   post:
+ *     summary: 새로운 유저 생성
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username:
+ *                 type: string
+ *                 description: 로그인 아이디.
+ *               email:
+ *                 type: string
+ *                 description: 로그인 아이디.
+ *               password:
+ *                 type: string
+ *                 description: 로그인 비밀번호.
+ *     responses:
+ *       201:
+ *         description: 유저 생성 성공.
+ */
+
+/**
+/**
+ * @swagger
+ * /auth/login:
+ *   post:
+ *     tags: [Authentication]
+ *     summary: 사용자 로그인
+ *     description: 사용자의 이름과 비밀번호를 받아 로그인을 수행합니다.
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username:
+ *                 type: string
+ *                 description: 로그인 아이디.
+ *               password:
+ *                 type: string
+ *                 description: 로그인 비밀번호.
+ *     responses:
+ *       200:
+ *         description: 로그인 성공
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: integer
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: "로그인 성공"
+ *                 token:
+ *                   type: object
+ *                   properties:
+ *                     username:
+ *                       type: string
+ *                       example: "admin"
+ *                     accessToken:
+ *                       type: string
+ *                       example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTU4Mjc2NzUsImV4cCI6MTcxNTgyODU3NX0.AvtFgnpF5_NmdnzT966Fy98ijfApLiJDaTuGAQogQuQ"
+ *                     refreshToken:
+ *                       type: string
+ *                       example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTU4Mjc2NzUsImV4cCI6MTcxNjQzMjQ3NX0.MAHJAFF0urodVycXat6HEm8QZ_SPUYYZyHV6z2GfcVE"
+ *       400:
+ *         description: 잘못된 요청 (유효하지 않은 사용자 이름 또는 비밀번호)
+ *       500:
+ *         description: 서버 오류
+ */
+
+/**
+ * @swagger
+ * /auth/refresh:
+ *   post:
+ *     tags: [Authentication]
+ *     summary: 엑세스 토큰 재발급
+ *     description: 쿠키에 저장된 refresh token을 사용하여 새 access token을 발급받습니다.
+ *     responses:
+ *       200:
+ *         description: 엑세스 토큰 갱신 성공
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: integer
+ *                   example: 200
+ *                 message:
+ *                   type: string
+ *                   example: "엑세스 토큰 갱신 성공"
+ *                 token:
+ *                   type: object
+ *                   properties:
+ *                     username:
+ *                       type: string
+ *                       example: "user_example"
+ *                     accessToken:
+ *                       type: string
+ *                       example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJfZXhhbXBsZSIwicm9sZSI6InVzZXIiLCJpYXQiOjE2MzI2OTQwODAsImV4cCI6MTYzMjcwMTI4MH0.V3dV4TS9xGItFzk8mi1h88kL2SjQxGH0x5z0fQIL1SU"
+ *       401:
+ *         description: 인증 실패, 유효하지 않거나 존재하지 않는 토큰
+ *       500:
+ *         description: 서버 오류
+ */

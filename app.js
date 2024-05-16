@@ -8,12 +8,15 @@ import ProductController from "./controllers/productController.js";
 import AuthController from "./controllers/authContorller.js";
 import AdminController from "./controllers/adminController.js";
 import loggerMiddleware from "./middlewares/logger.middleware.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./utils/swaggerOptions.js";
 connectDB();
 
 const app = express();
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
 
+app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
