@@ -1,7 +1,5 @@
 ## Node Express CRUD Project
 
--   [Api Swagger](http://dfgdwssegf.shop:3000/swagger/)
-
 # 서버 실행 방법
 
 ## 설치 절차
@@ -28,6 +26,7 @@ JWT_REFRESH_SECRET="5edon"
 5. 서버 접근
 
 -   [http://localhost:3000/api](http://localhost:3000/api)
+-   [http://localhost:3000/swagger/](http://localhost:3000/swagger/)
 
 # ✨EndPoint
 
